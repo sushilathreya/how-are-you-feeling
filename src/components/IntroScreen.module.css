@@ -1,0 +1,44 @@
+.container {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-family: "Koulen", cursive;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+input {
+  font-family: "Marck Script", cursive;
+  font-size: 28px;
+  padding: 10px;
+  border-radius: 30px;
+  width: 60vh;
+  border: none;
+  margin: 0;
+}
+
+button {
+  font-size: 20px;
+  font-family: "Marck Script", cursive;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 5px;
+  width: 30%;
+  margin: 0;
+  margin-top: 25px;
+  background-color: #0D1B1E;
+  color: white;
+  transition: all ease-in-out;
+}
+
+button:hover {
+  cursor: pointer;
+  transition-delay: 100ms;
+  background-color: white;
+  color:#0D1B1E;
+}

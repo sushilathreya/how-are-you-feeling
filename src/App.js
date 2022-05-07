@@ -3,6 +3,7 @@ import IntroScreen from "./components/IntroScreen";
 import { useState } from "react";
 import React from "react";
 import Rock from "./components/Rock"
+import Card from "./components/Card";
 
 function App(props) {
   const [rock, setRock] = useState(false);

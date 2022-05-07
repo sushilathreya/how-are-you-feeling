@@ -5,6 +5,7 @@ body {
   font-family: "Koulen", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(255, 175, 4);
 }
 
 code {
