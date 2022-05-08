@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./IntroScreen.module.css";
-import ShareFooter from "./Share";
 
 function IntroScreen(props) {
   return (
