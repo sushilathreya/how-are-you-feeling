@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Koulen&family=Marck+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Grand+Hotel&family=Koulen&family=Marck+Script&display=swap");
 
 body {
   margin: 0;
+  background-color: #ffaf04;
   font-family: "Koulen", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(255, 175, 4);
+  height: 100vh;
 }
 
 code {

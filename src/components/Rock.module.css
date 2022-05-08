@@ -1,20 +1,33 @@
-body {
-    position: absolute;
-    margin: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.rock {
+  position: absolute;
+  margin: 0;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: moveUp 8.5s;
 }
 
 h2 {
-    color: black;
-    margin-bottom: 10px;
-    user-select: none;
+  color: black;
+  margin-bottom: 10px;
+  user-select: none;
 }
 
 .image {
-    border: solid 10px black;
-    width: 40vh;
-    border-radius: 5px;
-    margin-top: 10px;
+  border: solid 10px black;
+  width: 40vh;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+@keyframes moveUp {
+  0% {
+    top: 50%;
+  }
+  90% {
+    top: 50%;
+  }
+  100% {
+    top: 40%;
+  }
 }
