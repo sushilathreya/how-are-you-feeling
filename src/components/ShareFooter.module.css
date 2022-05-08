@@ -6,7 +6,7 @@
   left: 50%;
   width: 50%;
   text-align: center;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   transform: translateX(-50%);
   border-radius: 32px;
@@ -14,6 +14,7 @@
 }
 
 .coffee {
+  margin: 0;
   margin-left: 10%;
   background-color: #5f7fff;
   font-size: 20px;
@@ -22,7 +23,7 @@
   border-radius: 32px;
   padding: 10px 15px;
   color: white;
-  width: 15rem;
+  width: 200px;
   transition: all ease-in-out;
   text-decoration: none;
 }
@@ -32,4 +33,28 @@
   transition-delay: 100ms;
   background-color: white;
   color: #0d1b1e;
+}
+
+@media (max-width: 1000px) {
+  .footer {
+    bottom: 5%;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .coffee {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .footer {
+    width: 90%;
+  }
+  .coffee {
+    font-size: 16px;
+    width: 150px;
+  }
 }

@@ -4,7 +4,7 @@ import styles from "./Share.module.css"
 
 const Share = (props) => {
   return (
-    <div>
+    <>
       <RWebShare
         data={{
           text: "How to feel better in 10s",
@@ -17,7 +17,7 @@ const Share = (props) => {
       >
         <button className={styles.shareBtn}>Share with friends</button>
       </RWebShare>
-    </div>
+    </>
   );
 };
 

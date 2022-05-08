@@ -7,7 +7,7 @@ button {
   margin: 0;
   background-color: #29524A;
   color: white;
-  width: 15rem;
+  width: 200px;
   transition: all ease-in-out;
 }
 
@@ -16,4 +16,11 @@ button:hover {
   transition-delay: 100ms;
   background-color: white;
   color:#0D1B1E;
+}
+
+@media (max-width: 400px) {
+  button {
+    font-size: 16px;
+    width: 150px;
+  }
 }
