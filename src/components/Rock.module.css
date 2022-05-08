@@ -1,7 +1,7 @@
 .rock {
   position: absolute;
   margin: 0;
-  top: 40%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   animation: moveUp 8.5s;
@@ -32,7 +32,7 @@ h2 {
     top: 50%;
   }
   100% {
-    top: 40%;
+    top: 35%;
   }
 }
 
