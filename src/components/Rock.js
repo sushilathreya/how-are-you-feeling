@@ -16,7 +16,7 @@ function Rock(props) {
     }, 8500);
   }
   return (
-    <div>
+    <div className={styles.rockContainer}>
       <div className={styles.rock}>
         <Card>
           <img

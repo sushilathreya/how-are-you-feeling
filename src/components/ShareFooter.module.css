@@ -37,7 +37,7 @@
 
 @media (max-width: 1000px) {
   .footer {
-    bottom: 5%;
+    bottom: 10%;
     flex-direction: column;
     text-align: center;
     align-items: center;
