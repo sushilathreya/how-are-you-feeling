@@ -10,6 +10,7 @@ function IntroScreen(props) {
         placeholder={"I'm feeeeeeling good..."}
         onChange={props.showRock}
       ></input>
+      <p>Go into as much detail as possible</p>
     </div>
   );
 }

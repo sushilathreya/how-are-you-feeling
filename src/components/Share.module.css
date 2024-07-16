@@ -8,12 +8,11 @@ button {
   background-color: #29524A;
   color: white;
   width: 200px;
-  transition: all ease-in-out;
+  transition: ease-in-out 0.1s;
 }
 
 button:hover {
   cursor: pointer;
-  transition-delay: 100ms;
   background-color: white;
   color:#0D1B1E;
 }

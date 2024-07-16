@@ -1,20 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Rock.module.css";
-import Sound from "react-sound";
+import { Howl } from "howler";
 import Song from "../audio/Rock.mp3";
-import { useState } from "react";
 import Card from "./Card";
 import ShareFooter from "./ShareFooter";
 
 function Rock(props) {
   const [isPlaying, setIsPlaying] = useState(true);
   const [isShare, setIsShare] = useState(false);
-  function handleSongPlaying() {
-    setTimeout(() => {
-      setIsPlaying(false);
-      setIsShare(true);
-    }, 8500);
-  }
+
+  useEffect(() => {
+    const sound = new Howl({
+      src: [Song],
+      volume: 0.5,
+      onend: () => {
+        setIsPlaying(false);
+        setIsShare(true);
+      },
+    });
+
+    if (isPlaying) {
+      sound.play();
+      setTimeout(() => {
+        sound.stop();
+        setIsPlaying(false);
+        setIsShare(true);
+      }, 8500);
+    }
+
+    return () => {
+      sound.unload();
+    };
+  }, [isPlaying]);
+
   return (
     <div className={styles.rockContainer}>
       <div className={styles.rock}>
@@ -28,16 +46,11 @@ function Rock(props) {
           ></img>
           <h2>IT DOESN'T MATTER HOW YOU FEEL</h2>
         </Card>
-
-        <Sound
-          url={Song}
-          playStatus={isPlaying ? Sound.status.PLAYING : Sound.status.STOPPED}
-          playFromPosition={0}
-          onPlaying={handleSongPlaying}
-          volume={50}
-        ></Sound>
       </div>
-      {isShare && <ShareFooter />}
+      {/* <div className="try-again-container">
+        <button onClick={props.hideRock}>Try again</button>
+      </div> */}
+      {isShare && <ShareFooter showTry={true} hideRock={props.hideRock}/>}
     </div>
   );
 }
