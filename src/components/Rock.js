@@ -12,7 +12,7 @@ function Rock(props) {
   useEffect(() => {
     const sound = new Howl({
       src: [Song],
-      volume: 0.5,
+      volume: 0.7,
       onend: () => {
         setIsPlaying(false);
         setIsShare(true);
