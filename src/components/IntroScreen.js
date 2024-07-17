@@ -9,6 +9,7 @@ function IntroScreen(props) {
         type={"text"}
         placeholder={"I'm feeeeeeling good..."}
         onChange={props.showRock}
+        autoFocus
       ></input>
       <p>Go into as much detail as possible</p>
     </div>
