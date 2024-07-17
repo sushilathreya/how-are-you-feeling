@@ -1,7 +1,7 @@
 import "./App.css";
 import ReactGA from "react-ga";
 import IntroScreen from "./components/IntroScreen";
-import { useState } from "react";
+import {useEffect, useState } from "react";
 import React from "react";
 import Rock from "./components/Rock";
 import ShareFooter from "./components/ShareFooter";
