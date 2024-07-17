@@ -1,6 +1,9 @@
 import React from "react";
 import { RWebShare } from "react-web-share";
+import ReactGA from "react-ga";
 import styles from "./Share.module.css"
+
+ReactGA.initialize("G-LVL27T0XYL");
 
 const Share = (props) => {
   return (
@@ -13,9 +16,17 @@ const Share = (props) => {
           sites: ["twitter", "whatsapp", "reddit", "telegram", "copy"]
         }}
         
-        onClick={() => console.log("shared successfully!")}
+        onClick={() => {
+          console.log("shared successfully!");
+        }}
       >
-        <button className={styles.shareBtn}>{props.shareText}</button>
+        <button className={styles.shareBtn} onClick={() => {
+          console.log("shared successfully!");
+          ReactGA.event({
+            category: "User",
+            action: "Share button clicked"
+          })
+        }}>{props.shareText}</button>
       </RWebShare>
     </>
   );
