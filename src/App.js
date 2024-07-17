@@ -1,36 +1,41 @@
-import "./App.css";
-import ReactGA from "react-ga";
-import IntroScreen from "./components/IntroScreen";
-import {useEffect, useState } from "react";
-import React from "react";
-import Rock from "./components/Rock";
-import ShareFooter from "./components/ShareFooter";
+// src/App.js
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import { trackEvent } from './utils/analytics';
+import IntroScreen from './components/IntroScreen';
+import Rock from './components/Rock';
+import ShareFooter from './components/ShareFooter';
+import './App.css';
 
-ReactGA.initialize("G-LVL27T0XYL");
+function usePageTracking() {
+  const location = useLocation();
 
-function App(props) {
   useEffect(() => {
-    // Track initial page load
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
+    if (window.gtag) {
+      window.gtag('config', 'G-LVL27T0XYL', {
+        page_path: location.pathname + location.search,
+      });
+    }
+  }, [location]);
+}
+
+function App() {
+  usePageTracking();
 
   const [rock, setRock] = useState(false);
-  // const [share, setShare] = useState(false);
+
   function RockHandler(e) {
     setTimeout(() => {
       setRock(true);
-      // Track state change to rock=true
-      ReactGA.event({
-        category: "User",
-        action: "Rockrolled"
-      });
+      trackEvent('rockrolled', 'engagement', 'rockroll_label', 1);
     }, 1500);
   }
+
   return (
     <div className="App">
       {!rock && <IntroScreen showRock={RockHandler} />}
-      {!rock && <ShareFooter showTry={false}/>}
-      {rock && <Rock hideRock={()=> setRock(false)}/>}
+      {!rock && <ShareFooter showTry={false} />}
+      {rock && <Rock hideRock={() => setRock(false)} />}
     </div>
   );
 }

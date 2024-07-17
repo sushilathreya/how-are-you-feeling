@@ -1,9 +1,7 @@
 import React from "react";
 import { RWebShare } from "react-web-share";
-import ReactGA from "react-ga";
+import { trackEvent } from "../utils/analytics.js";
 import styles from "./Share.module.css"
-
-ReactGA.initialize("G-LVL27T0XYL");
 
 const Share = (props) => {
   return (
@@ -13,7 +11,7 @@ const Share = (props) => {
           text: "How to feel better in 10s",
           url: "https://sushilathreya.github.io/how-are-you-feeling/",
           title: "Make your friends feel better",
-          sites: ["twitter", "whatsapp", "reddit", "telegram", "copy"]
+          sites: ["x", "whatsapp", "reddit", "telegram", "copy"]
         }}
         
         onClick={() => {
@@ -22,10 +20,7 @@ const Share = (props) => {
       >
         <button className={styles.shareBtn} onClick={() => {
           console.log("shared successfully!");
-          ReactGA.event({
-            category: "User",
-            action: "Share button clicked"
-          })
+          trackEvent('share_btn_clicked', 'user', 'button_label', 1);
         }}>{props.shareText}</button>
       </RWebShare>
     </>

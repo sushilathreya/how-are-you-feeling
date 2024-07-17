@@ -1,9 +1,7 @@
 import React from "react";
 import Share from "./Share";
-import ReactGA from "react-ga";
-import styles from "./ShareFooter.module.css"
-
-ReactGA.initialize("G-LVL27T0XYL");
+import { trackEvent } from "../utils/analytics.js";
+import styles from "./ShareFooter.module.css";
 
 function ShareFooter(props) {
   return (
@@ -12,10 +10,7 @@ function ShareFooter(props) {
         {props.showTry && <Share shareText="Rockroll your friends"/>}
         <a href="https://www.buymeacoffee.com/Fz7yfN1s35" onClick={() => {
           console.log("shared successfully!");
-          ReactGA.event({
-            category: "User",
-            action: "BMAC Clicked"
-          })
+          trackEvent('BMAC clicked', 'user', 'button_label', 1);
         }} className={styles.coffee}>Buy me a coffee ☕</a>
         {props.showTry && <button className={styles.tryAgainBtn} onClick={props.hideRock}>Try Again</button>}
     </div>

@@ -5,10 +5,7 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="How to feel better in 10s"
-    />
+    <meta property="og:description" content="How to feel better in 10s" />
     <meta property="og:image" content="%PUBLIC_URL%/og-image.png" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
@@ -30,6 +27,18 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-LVL27T0XYL"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-LVL27T0XYL");
+    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
