@@ -12,7 +12,7 @@ function ShareFooter(props) {
           console.log("shared successfully!");
           trackEvent('BMAC clicked', 'user', 'button_label', 1);
         }} className={styles.coffee}>Buy me a coffee ☕</a>
-        {props.showTry && <button className={styles.tryAgainBtn} onClick={props.hideRock}>Try Again</button>}
+        {props.showTry && <button className={styles.tryAgainBtn} onClick={props.hideRock}>Try again</button>}
     </div>
   );
 }
