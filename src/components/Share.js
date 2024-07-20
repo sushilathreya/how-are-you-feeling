@@ -20,7 +20,7 @@ const Share = (props) => {
       >
         <button className={styles.shareBtn} onClick={() => {
           console.log("shared successfully!");
-          trackEvent('share_btn_clicked', 'user', 'button_label', 1);
+          trackEvent('Share Clicked', 'user', 'button_label', 1);
         }}>{props.shareText}</button>
       </RWebShare>
     </>
