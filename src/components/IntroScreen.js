@@ -13,11 +13,11 @@ function IntroScreen(props) {
       ></input>
       <div className={styles.nudgeContainer}>
         <div className={styles.textElement}>
-          <img src="smiley.png" alt="pour your heart out" />
+          <img src={`${process.env.PUBLIC_URL}/smiley.png`} alt="pour your heart out" />
           <p>Go into as much detail as possible</p>
         </div>
         <div className={styles.textElement}>
-          <img src="/speaker.png" alt="turn up volume" />
+          <img src={`${process.env.PUBLIC_URL}/speaker.png`} alt="turn up volume" />
           <p>Turn up volume for the best experience</p>
         </div>
       </div>

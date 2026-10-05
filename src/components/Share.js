@@ -9,7 +9,7 @@ const Share = (props) => {
       <RWebShare
         data={{
           text: "How to feel better in 10s",
-          url: "https://www.howareyoufeeling.xyz/",
+          url: "https://sushilathreya.com/howareyoufeeling",
           title: "Make your friends feel better",
           sites: ["x", "whatsapp", "reddit", "telegram", "copy"]
         }}
